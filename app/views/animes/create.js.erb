@@ -1,0 +1,4 @@
+$('#cuerpo').append('<%= j render "/animes/fila", anime: @anime %>');
+
+
+$('#count').html('Animes disponibles: <%= Anime.count %>')

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Animes</h1>
+
+<div id="count">Animes disponibles: <%= Anime.count %></div>
+<div id="formulario"></div>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Numero</th>
+      <th>Suma</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="cuerpo">
+    <% @animes.each do |anime| %>
+    
+      <%= render 'animes/fila', anime: anime %>
+    
+      
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anime', new_anime_path, remote: true %>
+
